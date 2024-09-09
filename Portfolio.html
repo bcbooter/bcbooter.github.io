@@ -1,3 +1,4 @@
+
 <html><head>
   
 <title>Bridgeport Asset Management</title>
@@ -31,8 +32,10 @@
 <meta name="twitter:description" content="An innovative approach to asset management through deep simplicity and honesty.">
 <meta name="twitter:image" content="https://bamllc.jpg">
 
+<!-- Plotly.js CDN -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-    
+<style>
     hr.style-six {
         border: 0;
         height: 0;
@@ -60,26 +63,13 @@
     <h2 style="margin-bottom:2px;">
         <b><font size="+3">B</font><font size="+2">ridgeport</font> <font size="+3">A</font><font size="+2">sset</font> <font size="+3">M</b></font><font size="+2">anagement</font> <font size="+1">Llc</font>
     </h2>
-
+</div>
 
 <hr class="style-six">
 
-<div style="margin-bottom:30px;"><i><b>Our Portfolio Composition</b></i></div>
+<div style="margin-bottom:30px;"><i><b>Spider Chart - Portfolio vs S&P 500/b></i></div>
 
-<p><b>A unique medium of exchange that everyone around the world can agree upon is extremely unique. 
-    Money, or cash is the one medium everyone can agree upon its value; therefore, we view the focus on long term free cash flow to be the most impotant characteristic for investment and valuation.</b></p>
-
-  
- <!-- Include Plotly JS -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
-
-
-
-
-
-    <h2>Spider Chart - Portfolio vs S&P 500</h2>
-    <!-- Div to hold the radar chart -->
+ <!-- Div to hold the radar chart -->
     <div id="spiderChart" style="width:600px;height:600px;"></div>
 
     <script>
@@ -109,5 +99,12 @@
 
         Plotly.newPlot('spiderChart', data, layout);
     </script>
+
+
+
+
+<a href="/Links.html">Back</a>
+  
+</div>
 </body>
 </html>
