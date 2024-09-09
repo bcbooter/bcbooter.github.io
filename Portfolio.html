@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Chart - Portfolio vs S&P 500</title>
+    <!-- Include Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h2>Spider Chart - Portfolio vs S&P 500</h2>
+    <!-- Div to hold the radar chart -->
+    <div id="spiderChart" style="width:600px;height:600px;"></div>
+
+    <script>
+        var data = [{
+            type: 'scatterpolar',
+            r: [70, 50, 20, 20, 0.2, 20, 20],
+            theta: ['Gross Margin', 'Operating Margin', 'ROIC', 'FCF Growth', 'Debt to Equity', 'FCF % of Sales', 'Price to Cash Flow'],
+            fill: 'toself',
+            name: 'My Portfolio'
+        }, {
+            type: 'scatterpolar',
+            r: [65, 40, 10, 15, 0.5, 6, 17],
+            theta: ['Gross Margin', 'Operating Margin', 'ROIC', 'FCF Growth', 'Debt to Equity', 'FCF % of Sales', 'Price to Cash Flow'],
+            fill: 'toself',
+            name: 'S&P 500'
+        }];
+
+        var layout = {
+            polar: {
+                radialaxis: {
+                    visible: true,
+                    range: [0, 100] // Adjust range based on data to fit both portfolios
+                }
+            },
+            showlegend: true
+        };
+
+        Plotly.newPlot('spiderChart', data, layout);
+    </script>
+</body>
+</html>
