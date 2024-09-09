@@ -34,7 +34,12 @@
      
      
      <style>
-   
+
+ /* Add spacing between links in the second column */
+    td:nth-child(2) a {
+        display: block;  /* Ensures each link is on a new line */
+        margin-bottom: 10px;  /* Adds space between the links */
+    }       
        hr.style-six {
        border: 0;
        height: 0;
@@ -70,7 +75,7 @@
     <div class="table-container">
         <table>
             <tr>
-                <td><a href="/Active.html">Active Funds</a></td><br>
+                <td><a href="/Active.html">Active Funds</a></td>
                 <td><a href="/data.html">The Asymmetry of Market Returns</a></td>
             </tr>
             <tr>
@@ -79,7 +84,8 @@
             </tr>
         </table>
     </div>
-<br>
+
+     <br>
     <a href="index.html">Back</a>
 
 </body>
